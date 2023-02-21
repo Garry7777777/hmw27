@@ -1,16 +1,24 @@
 package org.skypro;
 
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Person {
 
-    private  Transport car;
+//    @Autowired
+//    @Qualifier("moto")
+    private  Transport transport;
 
-    public void setCar(Car car) {
-        this.car = car;
-    }
+    public Person(@Qualifier("moto") Transport transport) { this.transport = transport; }
 
-    public void sitInCar(){
-        System.out.println("Владелец сел в автомобиль");
-        car.go();
+//    @Autowired
+//    @Qualifier("moto")
+//    public void setTransport(Transport transport) { this.transport = transport; }
+
+    public void sitInTransport(){
+        System.out.println("Владелец сел в транспорт");
+        transport.go();
     }
 
 }
