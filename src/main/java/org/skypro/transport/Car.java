@@ -1,5 +1,6 @@
-package org.skypro;
+package org.skypro.transport;
 
+import org.skypro.transport.Transport;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -8,7 +9,7 @@ import javax.annotation.PreDestroy;
 
 @Component
 @Scope("singleton")
-public class Car implements Transport{
+public class Car implements Transport {
 
 
     public Car() {

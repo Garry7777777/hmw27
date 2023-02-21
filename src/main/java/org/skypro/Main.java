@@ -1,5 +1,10 @@
 package org.skypro;
 
+import org.skypro.config.Config;
+import org.skypro.person.Person;
+import org.skypro.transport.Car;
+import org.skypro.transport.Moto;
+import org.skypro.transport.Transport;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -28,11 +33,11 @@ public class Main
         ClassPathXmlApplicationContext context =
                 new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Transport  moto = context.getBean("moto", Moto.class);
+        Transport moto = context.getBean("moto", Moto.class);
         moto.go();
 
         // задача 5
-        Person  person  = context.getBean("person", Person.class);
+        Person person  = context.getBean("person", Person.class);
         person.sitInTransport();
 
 

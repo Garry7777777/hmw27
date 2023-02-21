@@ -1,5 +1,6 @@
-package org.skypro;
+package org.skypro.person;
 
+import org.skypro.transport.Transport;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
@@ -8,7 +9,7 @@ public class Person {
 
 //    @Autowired
 //    @Qualifier("moto")
-    private  Transport transport;
+    private Transport transport;
 
     public Person(@Qualifier("moto") Transport transport) { this.transport = transport; }
 

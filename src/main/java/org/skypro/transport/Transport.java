@@ -1,4 +1,4 @@
-package org.skypro;
+package org.skypro.transport;
 
 public interface Transport {
 

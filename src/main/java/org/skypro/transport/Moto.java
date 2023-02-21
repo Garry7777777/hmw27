@@ -1,5 +1,6 @@
-package org.skypro;
+package org.skypro.transport;
 
+import org.skypro.transport.Transport;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
@@ -8,7 +9,7 @@ import javax.annotation.PreDestroy;
 
 @Component
 @Scope("prototype")
-public class Moto implements Transport{
+public class Moto implements Transport {
     public Moto() {System.out.println("Создан бин для Moto"); }
 
     public void go(){

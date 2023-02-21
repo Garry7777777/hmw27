@@ -1,4 +1,4 @@
-package org.skypro;
+package org.skypro.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
